@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class DemoAppConfig {
     @Bean
     public IDevOpsSecretsVaultClient client() {
-        BaseClient client = new BaseClient("tenantname", "username", "Password@1", "secrestvaultcloud.com");
+        BaseClient client = new BaseClient("tenantname", "username", "Password@1", "secretsvaultcloud.com");
         client.overrideVaultUrl("http://localhost:3333");
         return client;
     }
