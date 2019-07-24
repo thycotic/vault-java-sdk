@@ -1,7 +1,7 @@
 # Introduction 
-A zero-dependency Java client for the devops  secrets vault management solution.
+A Java client for the the Thycotic DevOps Secrets Vault management solution.
 
-This java client implement devops  secrets vault full HTTP API. It does so without relying on any other external libraries beyond the Java standard library, and is compatible with Java 8 and up.
+This Java client implements functions for authentication and secrets management via the DevOps Secrets Vault REST API. It is compatible with Java 8 and up.
 
 
 # Getting Started
@@ -24,7 +24,7 @@ This java client implement devops  secrets vault full HTTP API. It does so witho
     </dependency>
     ```
     
-2.	###### Initializing a cient  Instance
+2.	###### Initializing a cient Instance
 
        ```java
         IDevOpsSecretsVaultClient client = new BaseClient("tenant", "clientid", "clientsecret", "domain.com");
