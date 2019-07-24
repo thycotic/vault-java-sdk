@@ -9,6 +9,7 @@ This java client implement devops  secrets vault full HTTP API. It does so witho
 1.	###### Installation 
     The client is available from Maven Central, for all Java build systems.
     
+    ```
     Gradle:
     
     dependencies {
@@ -21,6 +22,7 @@ This java client implement devops  secrets vault full HTTP API. It does so witho
         <artifactId>devops-secrets-vault-sdk</artifactId>
         <version>1.0.0</version>
     </dependency>
+    ```
     
 2.	###### Initializing a cient  Instance
 
@@ -62,7 +64,7 @@ This java client implement devops  secrets vault full HTTP API. It does so witho
     results2.forEach((key, value) -> System.out.println(key + ":" + value));
      
 
-######License
+#####License
 
 Copyright [2019] [thycotic]
 
