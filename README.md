@@ -33,16 +33,16 @@ This java client implement devops  secrets vault full HTTP API. It does so witho
             
 3.	###### Usage 
     ```
-        Map<String, Object> att = new HashMap<String, Object>();
-        att.put("tag1", "1");
-    	        
-        Map<String, Object> data = new HashMap<String, Object>();
-        data.put("foo", "test123");
-    	        
-        SecretPushData sd = new SecretPushData();
-        sd.setAttributes(att);
-        sd.setData(data);
-        sd.setId("7083988c-eeb8-4a09-9fe3-27240cf8225f");
+       Map<String, Object> att = new HashMap<String, Object>();
+       att.put("tag1", "1");
+    
+       Map<String, Object> data = new HashMap<String, Object>();
+       data.put("foo", "test123");
+    
+       SecretPushData sd = new SecretPushData();
+       sd.setAttributes(att);
+       sd.setData(data);
+       sd.setId("7083988c-eeb8-4a09-9fe3-27240cf8225f");
        
       //Write operation
        se.createSecret("test02", sd);
