@@ -18,7 +18,7 @@ public class example {
 		   SecretService se = new BaseSecretService(client);
 		   
 		   
-		   Map<String, Object> att = new HashMap<String, Object>();
+		    Map<String, Object> att = new HashMap<String, Object>();
 	        att.put("tag1", "1");
 	        
 	        Map<String, Object> data = new HashMap<String, Object>();
@@ -50,8 +50,6 @@ public class example {
 		   Map<String, Object> results2 = se.getSecretMap("/test02");
 		   results2.forEach((key, value) -> System.out.println(key + ":" + value));
 
-		   
-		   
 		   //Delete operation 
 		    se.deleteSecret("test02");
 		   
