@@ -13,7 +13,7 @@ import com.thycotic.vault.secret.SecretService;
 public class example {
 
 	public static void main(String[] args) throws DevOpsSecretsVaultException {
-			IDevOpsSecretsVaultClient client = new BaseClient("testtenant", "d8d4be3b-3f29-4a31-8ade-da4dea913e66", "RA8mWU8Xpz7yIgUgMXeQQHFJRlBVY1ple-2apYOMowM", "devbambe.com");
+			IDevOpsSecretsVaultClient client = new BaseClient("tenant", "xxxxxxxxxx-3f29-xxx-8ade-da4dea913e66", "RA8mWU8XpzccccccccccccFJRlBVY1ple-2apYOMowM", "domain.com");
 		   //
 		   SecretService se = new BaseSecretService(client);
 		   
