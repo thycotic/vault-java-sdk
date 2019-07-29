@@ -22,10 +22,10 @@ public class BaseClient implements IDevOpsSecretsVaultClient {
     /**
      * Create client using client credentials
      *
-     * @param tenant
-     * @param clientId
-     * @param clientSecret
-     * @param baseDomain
+     * @param tenant tenant name
+     * @param clientId client id specific  to user
+     * @param clientSecret client secret specific to user
+     * @param baseDomain url for domain like qa or prod domain
      */
     public BaseClient(String tenant, String clientId, String clientSecret, String baseDomain) {
         this.tenant = tenant;

@@ -13,7 +13,7 @@ public interface IDevOpsSecretsVaultClient {
      * Retrieve authentication token for use within other services.
      *
      * @return JWT Authentication token
-     * @throws DevOpsSecretsVaultException
+     * @throws DevOpsSecretsVaultException exception
      */
     String getAuthToken() throws DevOpsSecretsVaultException;
 
