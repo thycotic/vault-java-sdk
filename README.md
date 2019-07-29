@@ -24,7 +24,7 @@ This Java client implements functions for authentication and secrets management 
     </dependency>
     ```
     
-2.	###### Initializing a cient Instance
+2.	###### Initializing a client Instance
 
        ```java
         IDevOpsSecretsVaultClient client = new BaseClient("tenant", "clientid", "clientsecret", "domain.com");
