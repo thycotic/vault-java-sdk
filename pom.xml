@@ -6,10 +6,10 @@
 
     <groupId>com.thycotic</groupId>
     <artifactId>devops-secrets-vault-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
-    <name>Devops Secret Vault</name>
-    <description>The Thycotic Light Vault java sdk is jdk based client for accessing secrets from the hosted vault</description>
+    <name>Devops Secrets Vault</name>
+    <description>The Thycotic DevOps Secrets Vault  is jdk based client for accessing secrets from the hosted vault</description>
     <url>https://github.com/thycotic/vault-java-sdk</url>
 
 
