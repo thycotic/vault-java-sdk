@@ -1,6 +1,7 @@
 package com.thycotic.vault;
 
 import com.thycotic.vault.client.BaseClient;
+import com.thycotic.vault.client.ClientCredentialParameters;
 import com.thycotic.vault.client.IDevOpsSecretsVaultClient;
 import com.thycotic.vault.secret.BaseSecretService;
 import com.thycotic.vault.secret.SecretService;
@@ -11,7 +12,9 @@ import org.springframework.context.annotation.Bean;
 public class DemoAppConfig {
     @Bean
     public IDevOpsSecretsVaultClient client() {
-        BaseClient client = new BaseClient("tenantname", "username", "Password@1", "secretsvaultcloud.com");
+        ClientCredentialParameters params = ClientCredentialParameters.
+                create("tenantname", "secretsvaultcloud.com", "clientId", "clientSecret");
+        BaseClient client = new BaseClient(params);
         client.overrideVaultUrl("http://localhost:3333");
         return client;
     }

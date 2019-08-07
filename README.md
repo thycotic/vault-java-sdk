@@ -13,22 +13,32 @@ This Java client implements functions for authentication and secrets management 
     Gradle:
     
     dependencies {
-        implementation 'com.thycotic:devops-secrets-vault-sdk:1.0.0'
+        implementation 'com.thycotic:devops-secrets-vault-sdk:1.1.0'
     }
     Maven:
     
     <dependency>
         <groupId>com.thycotic</groupId>
         <artifactId>devops-secrets-vault-sdk</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </dependency>
     ```
     
 2.	###### Initializing a client Instance
-
+    
+       Client Credential Authentication
        ```java
-        IDevOpsSecretsVaultClient client = new BaseClient("tenant", "clientid", "clientsecret", "domain.com");
-        SecretService se = new BaseSecretService(client);
+       ClientCredentialParameters clientParams = ClientCredentialParameters.
+                create("tenant", "domain.com", "clientid", "clientsecret");
+       IDevOpsSecretsVaultClient client = new BaseClient(clientParams);
+       SecretService se = new BaseSecretService(client);
+       ```
+       
+       AWS IAM Authentication using default AWS profile on machine
+       ```java
+       AwsParameters params = AwsParameters.createFromDefault("tenant", "domain.com");
+       IDevOpsSecretsVaultClient client = new BaseClient(params);
+       SecretService se = new BaseSecretService(client);
        ```
             
 3.	###### Usage 
@@ -68,20 +78,3 @@ This Java client implements functions for authentication and secrets management 
        //Delete operation 
         se.deleteSecret("test02");
     ```
-
-##### License
-
-Copyright [2019] [thycotic]
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-

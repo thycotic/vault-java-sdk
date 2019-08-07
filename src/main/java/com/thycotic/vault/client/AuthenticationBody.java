@@ -3,7 +3,7 @@ package com.thycotic.vault.client;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Representation of the request for authenticating within the service. This implementation requires client credentials.
+ * Representation of the request for authenticating within the service.
  * This could be abstracted in the future.
  *
  * @author dsv@thycotic.com
@@ -19,10 +19,20 @@ public class AuthenticationBody {
     @JsonProperty("client_secret")
     private String clientSecret;
 
+    @JsonProperty("aws_headers")
+    private String awsHeaders;
+
+    @JsonProperty("aws_body")
+    private String awsBody;
+
     public AuthenticationBody(String clientId, String clientSecret) {
         this.grantType = "client_credentials";
         this.clientId = clientId;
         this.clientSecret = clientSecret;
+    }
+
+    public AuthenticationBody(String grantType) {
+        this.grantType = grantType;
     }
 
     public String getClientId() {
@@ -31,5 +41,17 @@ public class AuthenticationBody {
 
     public String getClientSecret() {
         return clientSecret;
+    }
+
+    public String getAwsHeaders() { return awsHeaders; }
+
+    public String getAwsBody() { return awsBody; }
+
+    public void setAwsHeaders(String awsHeaders) {
+        this.awsHeaders = awsHeaders;
+    }
+
+    public void setAwsBody(String awsBody) {
+        this.awsBody = awsBody;
     }
 }
