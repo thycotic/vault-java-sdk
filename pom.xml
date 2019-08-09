@@ -253,7 +253,6 @@
                         <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
                     </systemPropertyVariables>
                 </configuration>
-
                 <!-- This should prevent surefire from rerunning tests but but no failsafe
                     reports are generated -->
                 <reportSets>
