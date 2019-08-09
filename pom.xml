@@ -62,7 +62,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.9.1</version>
+            <version>2.9.9.2</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -230,7 +230,6 @@
                         <jacoco-agent.destfile>target/jacoco.exec</jacoco-agent.destfile>
                     </systemPropertyVariables>
                 </configuration>
-
                 <!-- This should prevent surefire from rerunning tests but but no failsafe
                     reports are generated -->
                 <reportSets>
